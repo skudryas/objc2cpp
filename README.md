@@ -17,6 +17,7 @@ In fact, this script just replaces Objective-C classes and functions definitions
 I.e.:
 
 test.h:
+
     #import <Header.h>
     
     @interface Foo: Bar
@@ -24,6 +25,7 @@ test.h:
     @end
 
 test.m:
+
     #import <Foo.h>
     
     @implementation Foo
@@ -35,6 +37,7 @@ test.m:
 will be transformed to:
 
 test.hpp:
+
     #pragma once
     #include <Header.h>
     
@@ -44,6 +47,7 @@ test.hpp:
     };
 
 test.cpp:
+
     #include <Foo.h>
     
     int Foo::someMethod_withParam(char* a, int b)
