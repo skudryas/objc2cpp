@@ -110,6 +110,7 @@ function func_sign_rewrite(funcsign_body, class_name) {
     for (I in PARAMS) {
         RESULT_SIGN=RESULT_SIGN""PARAMS_DELIM""PARAMS[I]
         PARAMS_DELIM=", "
+        delete PARAMS[I]
     }
     RESULT_SIGN=RESULT_SIGN")"
     if (length(class_name)==0) {
